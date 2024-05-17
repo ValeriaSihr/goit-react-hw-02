@@ -1,10 +1,12 @@
+import css from './Options.module.css'
+
 const Options = ({ onLeaveFeedback, onReset }) => {
   return (
     <div>
-      <button type="button" onClick={() => onLeaveFeedback('good')}>Good</button>
-      <button onClick={() => onLeaveFeedback('neutral')}>Neutral</button>
-      <button onClick={() => onLeaveFeedback('bad')}>Bad</button>
-      <button onClick={onReset}>Reset</button>
+      <button className={css.optionBtn} type="button" onClick={() => onLeaveFeedback('good')}>Good</button>
+      <button className={css.optionBtn} type="button" onClick={() => onLeaveFeedback('neutral')}>Neutral</button>
+      <button className={css.optionBtn} type="button" onClick={() => onLeaveFeedback('bad')}>Bad</button>
+      <button className={css.optionBtn} type="button" onClick={onReset}>Reset</button>
     </div>
   );
 };
