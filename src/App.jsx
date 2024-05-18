@@ -36,7 +36,8 @@ function App() {
   return (
     <>
      <Description />
-      <Options onLeaveFeedback={updateFeedback} onReset={resetFeedback} />
+      
+      <Options onLeaveFeedback={updateFeedback} onReset={resetFeedback} totalFeedback={totalFeedback} />
       {totalFeedback > 0 ? (
         <Feedback feedback={feedback} total={totalFeedback} positivePercentage={positiveFeedbackPercentage} />
       ) : (
